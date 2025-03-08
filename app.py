@@ -20,7 +20,8 @@ def society_detail(society_id):
 
 @app.route('/societies')
 def society_list():
-    return render_template("societies.html", societyData=societyData)
+    allSocs = getFullSocietyData()
+    return render_template("societies.html", allSocs=allSocs)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

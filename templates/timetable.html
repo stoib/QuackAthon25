@@ -11,14 +11,15 @@
       </tr>
     </thead>
     <tbody>
-        <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
+            {% if index.day == 'Monday' %}
             <tr>
                 <td scope="row">{{ index.name }}</td>
                 <td>{{ index.location }}</td>
                 <td>{{ index.time }}</td>
                 <td>{{ index.map }}</td>
             </tr>
+            {%- endif %}
         {% endfor %}
     </tbody>
 </table>

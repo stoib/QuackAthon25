@@ -7,7 +7,7 @@
 
 classData = [
     {
-    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Tuesday", 'time': "11:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
+    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "11:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
     }
 ]
 

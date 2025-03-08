@@ -13,7 +13,7 @@ def timetable_detail(student_id):
     timetable = getTimeTableById(student_id)
     #print(timetable)
     if (timetable != "NULL"):
-        return render_template("timetable.html", timetable=timetable)
+        return render_template("timetable.html", timetable=timetable, days=days)
     else:
         return render_template('no_timetable.html')
 

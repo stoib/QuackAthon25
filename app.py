@@ -1,11 +1,21 @@
 from flask import Flask, render_template
 from society_data import *
+from timetable import *
 
 app = Flask(__name__)
 
 @app.route('/')
 def home():
     return render_template('index.html')
+
+@app.route('/timetable/<int:student_id>')
+def timetable_detail(student_id):
+    timetable = getTimeTableById(student_id)
+
+    if (timetable != "NULL"):
+        return render_template("timetable.html", timetable=timetable)
+    else:
+        return render_template('no_timetable.html')
 
 @app.route('/societies/<int:society_id>')
 def society_detail(society_id):

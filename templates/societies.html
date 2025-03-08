@@ -1,13 +1,16 @@
 {% extends "base.html" %}
 {% block title %}All Societies{% endblock %}
 {% block content %}
-    <ul>
-        {% for society in societies %}
-            <li>
-                <a href="/society/{{ society.name }}"><strong>{{ society.name }}</strong></a>
-                - {{ society.description }}
-            </li>
+    <div class="card-columns border border-primary rounded-sm col-9 mx-auto">
+        {% for society in allSocs %}
+            <div class="card" style="width: 18rem;">
+                <img src="../static/{{ society.image }}" class="card-img-top">
+                <div class="card-body">
+                <h5 class="card-title"><a href="../societies/{{ society.id }}">{{ society.name }}</a></h5>
+                <p class="card-text">{{ society.description }}</p>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
+    </div>
 {% endblock %}
 

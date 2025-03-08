@@ -3,6 +3,11 @@
 }
 
 .nav-button {
-    padding: 10px;
-    display: inline;
+    display: inline-block;
+    color: orange;
+}
+
+
+.navbar {
+    margin: 20px;
 }

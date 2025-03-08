@@ -2,10 +2,12 @@
 {% block title %}Pick Timetable{% endblock %}
 {% block content %}
 
-<p>Please enter your student ID: </p>
-<input type="number" id="id" name="id" min="0" max="9999">
+<div style="margin-left: 30px;">
+    <p>Please enter your student ID: </p>
+    <input type="number" id="id" name="id" min="0" max="9999">
 
-<a class="btn btn-primary" href="/timetable/id" role="button">Submit</a>
+    <a class="btn btn-primary" href="/timetable/id" role="button">Submit</a>
+</div>
 
 <script>
     document.getElementById('retrieveTimetable').addEventListener('click', () => {

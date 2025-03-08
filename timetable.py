@@ -10,7 +10,6 @@ def getTimeTableById(toFind):
     for i in range (len(classData)):
         if (classData[i].get('id') == toFind):
             results.append(classData[i])
-            print(classData[i])
     if len(results) >= 1:
         return results
     else:

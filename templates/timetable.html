@@ -14,23 +14,12 @@
         <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
             <tr>
-                <td scope="row">{{ timetable.name }}</td>
-                <td>{{ timetable.location }}</td>
-                <td>{{ timetable.time }}</td>
-                <td>{{ timetable.map }}</td>
+                <td scope="row">{{ index.name }}</td>
+                <td>{{ index.location }}</td>
+                <td>{{ index.time }}</td>
+                <td>{{ index.map }}</td>
             </tr>
         {% endfor %}
-      <tr>
-        <td scope="row">2</td>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <td scope="row">3</td>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
     </tbody>
 </table>
 

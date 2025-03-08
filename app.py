@@ -1,12 +1,11 @@
 from flask import Flask, render_template
 
 #store society data here for now, maybe store it somewhere else later, or in a file
-societyData = 
-    [
-        {'name':"board games club", 'description':"play board games etc etc etc"}
-        {'name':"computing society", 'description':"buncha nerds"}
+societyData = [
+        {'name':"board games club", 'description':"play board games etc etc etc"},
+        {'name':"computing society", 'description':"buncha nerds"},
         {'name':"esports society", 'description':"also nerds but videogames"}
-    ]
+]
 
 app = Flask(__name__)
 
@@ -24,7 +23,7 @@ def society_detail(socName):
     return render_template('society.html', society)
 
 @app.route('/societies')
-def society_list()
+def society_list():
     return render_template("societies.html", societyData)
 
 

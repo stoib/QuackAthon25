@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Pick Timetable{% endblock %}
+{% block content %}
+
+<p>Please enter your student ID: </p>
+<input type="number" id="id" name="id" min="0" max="9999">
+
+<a class="btn btn-primary" href="/timetable/id" role="button">Submit</a>
+
+<script>
+    document.getElementById('retrieveTimetable').addEventListener('click', () => {
+    
+    const score = parseInt(document.getElementById('id').value);
+
+    if (!isNaN(score))
+    {
+        window.location.href = `/timetable/${num}`
+    } else
+    {
+        alert("Please enter a valid name and score.");
+    }
+})
+</script>
+
+
+{% endblock %}

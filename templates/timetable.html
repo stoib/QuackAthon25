@@ -1,6 +1,6 @@
 
 {% include 'navbar.html'%}
-<table class="Monday table table-hover caption-top">
+<table class="table table-hover caption-top">
     <caption style="margin-left: 10px;">Monday</caption>
     <thead>
       <tr>
@@ -38,12 +38,14 @@
     <tbody>
         <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
+            {% if index.day == 'Tuesday' %}
             <tr>
                 <td scope="row">{{ index.name }}</td>
                 <td>{{ index.location }}</td>
                 <td>{{ index.time }}</td>
                 <td>{{ index.map }}</td>
             </tr>
+            {%- endif %}
         {% endfor %}
     </tbody>
 </table>
@@ -60,12 +62,14 @@
     <tbody>
         <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
+            {% if index.day == 'Wednesday' %}
             <tr>
                 <td scope="row">{{ index.name }}</td>
                 <td>{{ index.location }}</td>
                 <td>{{ index.time }}</td>
                 <td>{{ index.map }}</td>
             </tr>
+            {%- endif %}
         {% endfor %}
     </tbody>
 </table>
@@ -82,12 +86,14 @@
     <tbody>
         <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
+            {% if index.day == 'Thursday' %}
             <tr>
                 <td scope="row">{{ index.name }}</td>
                 <td>{{ index.location }}</td>
                 <td>{{ index.time }}</td>
                 <td>{{ index.map }}</td>
             </tr>
+            {%- endif %}
         {% endfor %}
     </tbody>
 </table>
@@ -104,12 +110,14 @@
     <tbody>
         <h1>{{ timetable.name }}</h1>
         {% for index in timetable %}
+            {% if index.day == 'Friday' %}
             <tr>
                 <td scope="row">{{ index.name }}</td>
                 <td>{{ index.location }}</td>
                 <td>{{ index.time }}</td>
                 <td>{{ index.map }}</td>
             </tr>
+            {%- endif %}
         {% endfor %}
     </tbody>
 </table>

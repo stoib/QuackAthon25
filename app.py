@@ -8,7 +8,6 @@ app = Flask(__name__)
 @app.route('/timetable/<int:student_id>')
 def timetable_detail(student_id):
     timetable = getTimeTableById(student_id)
-    #print(timetable)
 
     if (timetable != "NULL"):
         return render_template("timetable.html", timetable=timetable)

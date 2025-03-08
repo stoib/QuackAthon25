@@ -2,4 +2,6 @@
 {% block title %}{{ society.name }}{% endblock %}
 {% block content %}
     <h2>{{ society.name }}</h2>
+    <img src = "../static/{{ society.image }}" class="img-thumbnail img-fluid rounded" width="200" height="200">
+    <p>{{ society.description }}</p>
 {% endblock %}

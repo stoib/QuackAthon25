@@ -33,5 +33,9 @@ def society_list():
     allSocs = getFullSocietyData()
     return render_template("societies.html", allSocs=allSocs)
 
+@app.route('/timetable')
+def timetable():
+    return render_template("timetable_pick.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

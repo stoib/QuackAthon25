@@ -2,12 +2,16 @@
     background-color: #4365E2;
 }
 
-.nav-button {
-    display: inline-block;
-    color: orange;
+.nav-text {
+    font-size: 18px;
+    color: white;
 }
-
 
 .navbar {
     margin: 20px;
+}
+
+.nav-padding {
+    margin-left: 20px;
+    margin-right: 20px;
 }

@@ -1,9 +1,9 @@
 {% extends "base.html" %}
 {% block title %}All Societies{% endblock %}
 {% block content %}
-    <div class="card-group" width="200px">
+    <div class="card-group">
         {% for society in allSocs %}
-            <div class="card">
+            <div class="card" style="width: 18rem;">
                 <img src="../static/{{ society.image }}" class="card-img-top">
                 <div class="card-body">
                 <h5 class="card-title"><a href="../societies/{{ society.id }}">{{ society.name }}</a></h5>

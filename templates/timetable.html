@@ -1,104 +1,34 @@
 
 {% include 'navbar.html'%}
-{% include 'timetable-rowTemplate.html' %}
+<table class="table table-hover caption-top ms-3">
+<caption style="margin-left: 10px;">Monday</caption>
+{% include 'timetable-rowTemplateUpper.html' %}
+
+{% for index in timetable %}
+  {% if index.lectures[0].day == 'Monday' %}
+
+      {% include 'timetable-rowTemplateLower.html' %}
+
+  {% endif %}
+{% endfor %}
+</tbody>
+</table>
 
 
 <table class="table table-hover caption-top ms-3">
-    <caption style="margin-left: 10px;">Tuesday</caption>
-    <thead>
-      <tr>
-        <th scope="col">Type</th>
-        <th scope="col">Location</th>
-        <th scope="col">Time</th>
-        <th scope="col">Map</th>
-      </tr>
-    </thead>
-    <tbody>
-      {% for index in timetable %}
-      {% if index.lectures[0].day == 'Tuesday' %}
-      <tr>
-          <td scope="row">{{ index.lectures[0].title }}</td>
-          <td>{{ index.name }}</td>
-          <td>{{ index.lectures[0].location }}</td>
-          <td>{{ index.lectures[0].time }}</td>
-          <td>{{ index.lectures[0].map }}</td>
-      </tr>
-      {%- endif %}
+<caption style="margin-left: 10px;">Tuesday</caption>
+  {% include 'timetable-rowTemplateUpper.html' %}
+  
+  {% for index in timetable %}
+    {% if index.lectures[0].day == 'Tuesday' %}
+  
+        {% include 'timetable-rowTemplateLower.html' %}
+  
+    {% endif %}
   {% endfor %}
-    </tbody>
-</table>
+      </tbody>
+  </table>
 
-<table class="table table-hover caption-top ms-3">
-    <caption style="margin-left: 10px;">Wednesday</caption>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Time</th>
-        <th scope="col">Map</th>
-      </tr>
-    </thead>
-    <tbody>
-        <h1>{{ timetable.name }}</h1>
-        {% for index in timetable %}
-            {% if index.day == 'Wednesday' %}
-            <tr>
-                <td scope="row">{{ index.name }}</td>
-                <td>{{ index.location }}</td>
-                <td>{{ index.time }}</td>
-                <td>{{ index.map }}</td>
-            </tr>
-            {%- endif %}
-        {% endfor %}
-    </tbody>
-</table>
-<table class="table table-hover caption-top ms-3">
-    <caption style="margin-left: 10px;">Thursday</caption>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Time</th>
-        <th scope="col">Map</th>
-      </tr>
-    </thead>
-    <tbody>
-        <h1>{{ timetable.name }}</h1>
-        {% for index in timetable %}
-            {% if index.day == 'Thursday' %}
-            <tr>
-                <td scope="row">{{ index.name }}</td>
-                <td>{{ index.location }}</td>
-                <td>{{ index.time }}</td>
-                <td>{{ index.map }}</td>
-            </tr>
-            {%- endif %}
-        {% endfor %}
-    </tbody>
-</table>
-<table class="table table-hover caption-top ms-3">
-    <caption style="margin-left: 10px;">Friday</caption>
-    <thead>
-      <tr>
-        <th scope="col">Name</th>
-        <th scope="col">Location</th>
-        <th scope="col">Time</th>
-        <th scope="col">Map</th>
-      </tr>
-    </thead>
-    <tbody>
-        <h1>{{ timetable.name }}</h1>
-        {% for index in timetable %}
-            {% if index.day == 'Friday' %}
-            <tr>
-                <td scope="row">{{ index.name }}</td>
-                <td>{{ index.location }}</td>
-                <td>{{ index.time }}</td>
-                <td>{{ index.map }}</td>
-            </tr>
-            {%- endif %}
-        {% endfor %}
-    </tbody>
-</table>
+
 
 {% include 'footer.html' %}

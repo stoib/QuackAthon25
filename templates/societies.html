@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block title %}All Societies{% endblock %}
 {% block content %}
-    <div class="card-group">
+    <div class="card-columns">
         {% for society in allSocs %}
             <div class="card" style="width: 18rem;">
                 <img src="../static/{{ society.image }}" class="card-img-top">

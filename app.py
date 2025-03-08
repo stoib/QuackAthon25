@@ -2,9 +2,9 @@ from flask import Flask, render_template
 
 #store society data here for now, maybe store it somewhere else later, or in a file
 societyData = [
-        {'name':"board games club", 'description':"play board games etc etc etc"},
-        {'name':"computing society", 'description':"buncha nerds"},
-        {'name':"esports society", 'description':"also nerds but videogames"}
+        {'id':1, 'name':"boardgames", 'description':"play board games etc etc etc"},
+        {'id':2, 'name':"computing", 'description':"buncha nerds"},
+        {'id':3, 'name':"esports", 'description':"also nerds but videogames"}
 ]
 
 app = Flask(__name__)
@@ -13,18 +13,18 @@ app = Flask(__name__)
 def home():
     return render_template('index.html')
 
-@app.route('/societies/<socName>')
-def society_detail(socName):
-    society = societyData.get(name)
+@app.route('/<int:society_id>')
+def society_detail(society_id):
+    society = societyData.get(society_id)
 
     if society is None:
         return render_template('no_society.html')
 
-    return render_template('society.html', society)
+    return render_template('society.html', society=society)
 
 @app.route('/societies')
 def society_list():
-    return render_template("societies.html", societyData)
+    return render_template("societies.html", societyData=societyData)
 
 
 if __name__ == '__main__':

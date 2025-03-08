@@ -10,3 +10,6 @@ def getSocietyById(toFind):
         if (societyData[i].get('id') == toFind):
             return societyData[i]
     return "NULL"
+
+def getFullSocietyData():
+    return societyData

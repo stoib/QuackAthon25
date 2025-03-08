@@ -2,7 +2,7 @@
 {% block title %}All Societies{% endblock %}
 {% block content %}
     <ul>
-        {% for society in societies %}
+        {% for society in allSocs %}
             <li>
                 <a href="/society/{{ society.name }}"><strong>{{ society.name }}</strong></a>
                 - {{ society.description }}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}All Societies{% endblock %}
+{% block content %}
+    <ul>
+        {% for society in societies %}
+            <li>
+                <a href="/society/{{ society.name }}"><strong>{{ society.name }}</strong></a>
+                - {{ society.description }}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+

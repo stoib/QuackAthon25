@@ -7,7 +7,15 @@
     color: orange;
 }
 
+.nav-text {
+    font-size: 18px;
+    color: white;
+}
 
 .navbar {
     margin: 20px;
+}
+
+.nav-container {
+    margin-right: 20px;
 }

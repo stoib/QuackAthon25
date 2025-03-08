@@ -29,6 +29,46 @@
       </tbody>
   </table>
 
+  <table class="table table-hover caption-top ms-3">
+    <caption style="margin-left: 10px;">Wednesday</caption>
+      {% include 'timetable-rowTemplateUpper.html' %}
+      
+      {% for index in timetable %}
+        {% if index.lectures[0].day == 'Wednesday' %}
+      
+            {% include 'timetable-rowTemplateLower.html' %}
+      
+        {% endif %}
+      {% endfor %}
+          </tbody>
+      </table>
+
+      <table class="table table-hover caption-top ms-3">
+        <caption style="margin-left: 10px;">Thursday</caption>
+          {% include 'timetable-rowTemplateUpper.html' %}
+          
+          {% for index in timetable %}
+            {% if index.lectures[0].day == 'Thursday' %}
+          
+                {% include 'timetable-rowTemplateLower.html' %}
+          
+            {% endif %}
+          {% endfor %}
+              </tbody>
+          </table>
+          <table class="table table-hover caption-top ms-3">
+            <caption style="margin-left: 10px;">Friday</caption>
+              {% include 'timetable-rowTemplateUpper.html' %}
+              
+              {% for index in timetable %}
+                {% if index.lectures[0].day == 'Friday' %}
+              
+                    {% include 'timetable-rowTemplateLower.html' %}
+              
+                {% endif %}
+              {% endfor %}
+                  </tbody>
+              </table>
 
 
 {% include 'footer.html' %}

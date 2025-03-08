@@ -24,7 +24,7 @@ def getTimeTableById(toFind):
         return results
     else:
         print("I am an error")
-        return "Null"
+        return "NULL"
 
 def getFullTimeTableData():
     return classData

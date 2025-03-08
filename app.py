@@ -1,19 +1,14 @@
 from flask import Flask, render_template
 from timetable import *
 
-#store society data here for now, maybe store it somewhere else later, or in a file
-classData = [
-        {'id':1, 'name':"multiParadigm", 'location':"dalhousie LG05", 'time': "08:00", "map": "link"},
-        {'id':2, 'name':"Database", 'location':"QMB lab 3", 'time': "08:00", "map": "link"},
-        {'id':3, 'name':"UserDesign", 'location':"dalhousie LG105", 'time': "08:00", "map": "link"}
-]
+
 app = Flask(__name__)
 
 
 @app.route('/timetable/<int:student_id>')
 def timetable_detail(student_id):
     timetable = getTimeTableById(student_id)
-    print(timetable)
+    #print(timetable)
 
     if (timetable != "NULL"):
         return render_template("timetable.html", timetable=timetable)

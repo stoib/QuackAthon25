@@ -6,10 +6,16 @@ classData = [
 ]
 
 def getTimeTableById(toFind):
+    results = []
     for i in range (len(classData)):
         if (classData[i].get('id') == toFind):
-            return classData[i]
-    return "Null"
+            results.append(classData[i])
+            print(classData[i])
+    if len(results) >= 1:
+        return results
+    else:
+        print("I am an error")
+        return "Null"
 
 def getFullTimeTableData():
     return classData

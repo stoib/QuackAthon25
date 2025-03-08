@@ -22,6 +22,5 @@ def society_detail(society_id):
 def society_list():
     return render_template("societies.html", societyData=societyData)
 
-
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

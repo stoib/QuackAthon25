@@ -40,7 +40,7 @@ def timetable():
 
 @app.route('/student-info')
 def student():
-    render_template("student.html")
+    render_template("student-info.html")
 
 @app.route('/student-info/<int:student_id>')
 def student_details(student_id):

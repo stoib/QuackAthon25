@@ -6,22 +6,22 @@ societyData = [
 
         {'id':2, 'name':"computing", 'description':"buncha nerds", 'image':"ducs.png", 'events':{
         'id':2, 'name':"computing society", 'lectures': 
-        [{'title':"Hackathon", 'day':"Saturday", 'time': "10:00", 'location':"QMB", 'map': "link"}]}},
+        [{'title':"Hackathon", 'day':"Saturday", 'time': "10:00", 'location':"Queen Mother Building", 'map': "link"}]}},
 
         {'id':3, 'name':"esports", 'description':"also nerds but videogames", 'image':"esports.jpg", 'events':{
         'id':3, 'name':"esports society", 'lectures': 
         [{'title':"smash bros", 'day':"Monday", 'time': "20:00", 'location':"The Liar", 'map': "link"},
-        {'title':"jackbox", 'day':"Friday", 'time': "17:00", 'location':"Online",'map': "link"}]}},
+        {'title':"jackbox", 'day':"Friday", 'time': "17:00", 'location':"The Liar",'map': "link"}]}},
 
         {'id':4, 'name':"roleplay", 'description':"playing rolls, and rolling dice", 'image':"durps.webp", 'events':{
         'id':4, 'name':"roleplay society", 'lectures': 
-        [{'title':"DnD", 'day':"Monday", 'time': "19:00", 'location':"Dalhousie", 'map': "link"},
+        [{'title':"DnD", 'day':"Monday", 'time': "19:00", 'location':"Dalhousie Buildling", 'map': "link"},
         {'title':"Wargames", 'day':"Sunday", 'time': "11:00", 'location':"Cake or Dice",'map': "link"}]}},
 
 
         {'id':5, 'name':"marketing", 'description':"they do seem to be advertising right now", 'image':"marketing.webp", 'events':{
         'id':5, 'name':"marketing society", 'lectures': 
-        [{'title':"field research", 'day':"Tuesday", 'time': "10:00", 'location':"Big Tesco", 'map': "link"},
+        [{'title':"field research", 'day':"Tuesday", 'time': "10:00", 'location':"Tesco Riverside", 'map': "link"},
         {'title':"promotion", 'day':"Friday", 'time': "17:05", 'location':"Wetherspoons",'map': "link"}]}},
 
         {'id':6, 'name':"mycology", 'description':"that means the study of mushrooms", 'image':"mycology.webp", 'events':{

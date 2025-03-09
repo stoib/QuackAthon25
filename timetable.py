@@ -8,21 +8,21 @@
 #id is the module_id
 classData = [
     {
-    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "11:00", 'location':"Dalhousie", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
+    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "11:00", 'location':"Dalhousie Buildling", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie Buildling",'map': "link"}]
     },
     {
-    'id':2, 'name':"webdev", 'lectures': [{'title':"Lab", 'day':"Tuesday", 'time': "11:00", 'location':"Queen+Mother+Building", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
+    'id':2, 'name':"webdev", 'lectures': [{'title':"Lab", 'day':"Tuesday", 'time': "11:00", 'location':"Queen Mother Building", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie Buildling",'map': "link"}]
     },
     {
-    'id':3, 'name':"databases", 'lectures': [{'title':"Worshop", 'day':"Wednesday", 'time': "16:00", 'location':"Carnelley", 'map': "link" 
+    'id':3, 'name':"databases", 'lectures': [{'title':"Worshop", 'day':"Wednesday", 'time': "16:00", 'location':"D'Arcy Thompson Zoology Museum", 'map': "link" 
     }]
     },
     {
-    'id':4, 'name':"user interface design", 'lectures': [{'title':"Lab", 'day':"Thursday", 'time': "13:00", 'location':"Queen+Mother+Building", 'map': "link"
+    'id':4, 'name':"user interface design", 'lectures': [{'title':"Lab", 'day':"Thursday", 'time': "13:00", 'location':"Queen Mother Building", 'map': "link"
     }]
     },
     {
-    'id':5, 'name':"artificial intelligence", 'lectures': [{'title':"Lecture", 'day':"Friday", 'time': "14:00", 'location':"Queen+Mother+Building", 'map': "link" 
+    'id':5, 'name':"artificial intelligence", 'lectures': [{'title':"Lecture", 'day':"Friday", 'time': "14:00", 'location':"Queen Mother Building", 'map': "link" 
     }]
     }
 ]

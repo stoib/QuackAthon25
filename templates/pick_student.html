@@ -10,16 +10,19 @@
 </div>
 
 <script>
+    document.getElementById('retrieveDetails').addEventListener('click', () => {
+    
+    const num = parseInt(document.getElementById('id').value);
 
     try
     {
+        console.log(num)
         //attempting to read current user from cache
         const current_user = JSON.parse(localStorage.getItem("current_user"));
 
         //current_user exists, moving straight to their page
         window.location.href = `/user/${num}`
     } catch (err)
-    {
         //no student currently signed in, error caught
 
         //moving on to event listener for after user enters student number

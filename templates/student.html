@@ -6,5 +6,19 @@
     <h3>{{ student.first_name }} {{ student.surname }}</h3>
 
     <p>Age: {{ student.age }}</p>
+
+    <h3>Modules</h3>
+    <ul>
+        {% for module in student.modules %}
+            <li>{{ modules.module }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Societies</h3>
+    <ul>
+        {% for society in student.societies %}
+            <li>{{ societies.society }}</li>>
+        {% endfor %}
+    </ul> 
 </div>
 {% endblock %}

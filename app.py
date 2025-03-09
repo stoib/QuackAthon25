@@ -40,9 +40,9 @@ def timetable():
 
 @app.route('/user/<int:student_id>')
 def timetable_detail(student_id):
-    person = getStudentById(student_id)
+    student = getStudentById(student_id)
 
-    if (person != "NULL"):
+    if (student != "NULL"):
         return render_template("student.html", student=student)
     else:
         return render_template('no_student.html')

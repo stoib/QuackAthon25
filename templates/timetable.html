@@ -5,12 +5,18 @@
 {% include 'timetable-rowTemplateUpper.html' %}
 
 {% for index in timetable %}
-  {% if index.lectures[0].day == 'Monday' %}
-
-      {% include 'timetable-rowTemplateLower.html' %}
-
-  {% endif %}
-{% endfor %}
+                {% for lecture in index.lectures %}
+                  {% if lecture.day == 'Monday' %}
+                  <tr>
+                    <td scope="row">{{ lecture.title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ lecture.location }}</td>
+                    <td>{{ lecture.time }}</td>
+                    <td>{{ lecture.map }}</td>
+                </tr>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
 </tbody>
 </table>
 
@@ -20,12 +26,18 @@
   {% include 'timetable-rowTemplateUpper.html' %}
   
   {% for index in timetable %}
-    {% if index.lectures[0].day == 'Tuesday' %}
-  
-        {% include 'timetable-rowTemplateLower.html' %}
-  
-    {% endif %}
-  {% endfor %}
+                {% for lecture in index.lectures %}
+                  {% if lecture.day == 'Tuesday' %}
+                  <tr>
+                    <td scope="row">{{ lecture.title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ lecture.location }}</td>
+                    <td>{{ lecture.time }}</td>
+                    <td>{{ lecture.map }}</td>
+                </tr>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
       </tbody>
   </table>
 
@@ -34,12 +46,18 @@
       {% include 'timetable-rowTemplateUpper.html' %}
       
       {% for index in timetable %}
-        {% if index.lectures[0].day == 'Wednesday' %}
-      
-            {% include 'timetable-rowTemplateLower.html' %}
-      
-        {% endif %}
-      {% endfor %}
+                {% for lecture in index.lectures %}
+                  {% if lecture.day == 'Wednesday' %}
+                  <tr>
+                    <td scope="row">{{ lecture.title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ lecture.location }}</td>
+                    <td>{{ lecture.time }}</td>
+                    <td>{{ lecture.map }}</td>
+                </tr>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
           </tbody>
       </table>
 
@@ -48,12 +66,18 @@
           {% include 'timetable-rowTemplateUpper.html' %}
           
           {% for index in timetable %}
-            {% if index.lectures[0].day == 'Thursday' %}
-          
-                {% include 'timetable-rowTemplateLower.html' %}
-          
-            {% endif %}
-          {% endfor %}
+                {% for lecture in index.lectures %}
+                  {% if lecture.day == 'Thursday' %}
+                  <tr>
+                    <td scope="row">{{ lecture.title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ lecture.location }}</td>
+                    <td>{{ lecture.time }}</td>
+                    <td>{{ lecture.map }}</td>
+                </tr>
+                  {% endif %}
+                {% endfor %}
+              {% endfor %}
               </tbody>
           </table>
           <table class="table table-hover caption-top ms-3">
@@ -61,11 +85,17 @@
               {% include 'timetable-rowTemplateUpper.html' %}
               
               {% for index in timetable %}
-                {% if index.lectures[0].day == 'Friday' %}
-              
-                    {% include 'timetable-rowTemplateLower.html' %}
-              
-                {% endif %}
+                {% for lecture in index.lectures %}
+                  {% if lecture.day == 'Friday' %}
+                  <tr>
+                    <td scope="row">{{ lecture.title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ lecture.location }}</td>
+                    <td>{{ lecture.time }}</td>
+                    <td>{{ lecture.map }}</td>
+                </tr>
+                  {% endif %}
+                {% endfor %}
               {% endfor %}
                   </tbody>
               </table>

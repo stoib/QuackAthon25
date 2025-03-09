@@ -1,12 +1,25 @@
 {% extends "base.html" %}
 {% block title %}homepage{% endblock %}
 {% block content %}
-    <ul>
-        <li>
-            <a href="/societies">societies</a>
-        </li>
-        <li>
-            <a href="/societies/1">boardgames</a>
-        </li>
-    </ul>
+    <div class="card-deck border border-primary rounded-sm col-4 mx-auto">
+
+        <div class="card text-white bg-primary mb-3  mt-3" style="max-width: 18rem;">
+            <div class="card-header">Get More out of University</div>
+            <div class="card-body">
+              <h5 class="card-title">Join a Society</h5>
+              <p class="card-text">For any interest, passion, or even curiosity, come find some likeinded individuals, and make some new friends...</p>
+              <a href="../societies" class="btn btn-light btn-lg" role="button">Societies</a>
+            </div>
+          </div>
+
+        <div class="card text-white bg-primary mb-3 mt-3" style="max-width: 18rem;">
+            <div class="card-header">Plan your day</div>
+            <div class="card-body">
+              <h5 class="card-title">See what's coming up</h5>
+              <p class="card-text">View your timetable, see what lectures, labs, and society events are coming up - manage your time, and make the most of the week...</p>
+              <a href="../timetable" class="btn btn-light btn-lg" role="button">Timetable</a>
+            </div>
+          </div>
+
+    </div>
 {% endblock %}

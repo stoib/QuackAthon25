@@ -6,16 +6,17 @@
     <p>Please enter your student ID: </p>
     <input type="number" id="id" name="id" min="0" max="9999">
 
-    <a class="btn btn-primary" href="/timetable/id" role="button">Submit</a>
+    <a class="btn btn-primary" id="retrieveTimetable" role="button">Submit</a>
 </div>
 
 <script>
     document.getElementById('retrieveTimetable').addEventListener('click', () => {
     
-    const score = parseInt(document.getElementById('id').value);
+    const num = parseInt(document.getElementById('id').value);
 
-    if (!isNaN(score))
+    if (!isNaN(num))
     {
+        console.log(num)
         window.location.href = `/timetable/${num}`
     } else
     {

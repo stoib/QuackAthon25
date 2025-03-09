@@ -3,7 +3,7 @@
 {% block content %}
     <div class="card-columns border border-primary rounded-sm col-9 mx-auto">
         {% for society in allSocs %}
-            <div class="card" style="width: 18rem;">
+            <div class="card mt-3" style="width: 18rem;">
                 <img src="../static/{{ society.image }}" class="card-img-top">
                 <div class="card-body">
                 <h5 class="card-title"><a href="../societies/{{ society.id }}">{{ society.name }}</a></h5>

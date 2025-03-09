@@ -39,7 +39,7 @@ def society_list():
 def timetable():
     return render_template("timetable_pick.html")
 
-@app.route('/student-info')
+@app.route('/student')
 def student():
     render_template("student-info.html")
 
@@ -48,7 +48,7 @@ def student_details(student_id):
     student = getStudentById(student_id)
 
     if (student != "NULL"):
-        return render_template("student.html", student=student)
+        return render_template("student-info.html", student=student)
     else:
         return render_template('no_student.html')
 

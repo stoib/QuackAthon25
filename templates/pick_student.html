@@ -10,19 +10,39 @@
 </div>
 
 <script>
-    document.getElementById('retrieveTimetable').addEventListener('click', () => {
-    
-    const num = parseInt(document.getElementById('id').value);
 
-    if (!isNaN(num))
+    try
     {
-        console.log(num)
+        //attempting to read current user from cache
+        const current_user = JSON.parse(localStorage.getItem("current_user"));
+
+        //current_user exists, moving straight to their page
         window.location.href = `/user/${num}`
-    } else
+    } catch (err)
     {
-        alert("Please enter a valid ID.");
+        //no student currently signed in, error caught
+
+        //moving on to event listener for after user enters student number
+        document.getElementById('retrieveTimetable').addEventListener('click', () => {
+        
+        const num = parseInt(document.getElementById('id').value);
+
+        if (!isNaN(num))
+        {
+            //writing user id for debugging
+            console.log(num)
+
+            //saving 'current user' to local storage
+            localStorage.setItem("current_user", JSON.stringify({num}));
+
+            //moving to user page
+            window.location.href = `/user/${num}`;
+        } else
+        {
+            alert("Please enter a valid ID.");
+        }
+        })
     }
-})
 </script>
 
 

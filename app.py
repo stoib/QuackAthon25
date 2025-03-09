@@ -2,6 +2,7 @@ from flask import Flask, render_template
 from society_data import *
 from timetable import *
 from student import *
+from data_collator import *
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def home():
 
 @app.route('/timetable/<int:student_id>')
 def timetable_detail(student_id):
-    timetable = getTimeTableById(student_id)
+    timetable = compileTimesForStudent(student_id)
     #print(timetable)
     if (timetable != "NULL"):
         return render_template("timetable.html", timetable=timetable)

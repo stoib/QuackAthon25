@@ -10,9 +10,6 @@
 </div>
 
 <script>
-    document.getElementById('retrieveDetails').addEventListener('click', () => {
-    
-    const num = parseInt(document.getElementById('id').value);
 
     try
     {
@@ -23,6 +20,7 @@
         //current_user exists, moving straight to their page
         window.location.href = `/user/${num}`
     } catch (err)
+    {
         //no student currently signed in, error caught
 
         //moving on to event listener for after user enters student number

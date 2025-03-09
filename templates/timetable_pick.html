@@ -45,7 +45,7 @@ if (!current_user)
         print("User stored")
 
         //moving to user page
-        window.location.href = `/student/${num}`;
+        window.location.href = `/timetable/${num}`;
     } else
     {
         alert("Please enter a valid ID.");
@@ -54,7 +54,7 @@ if (!current_user)
 } else
 {
     //current_user exists, moving straight to their page
-    window.location.href = `/student/${current_user}`
+    window.location.href = `/timetable/${current_user}`
 }
 
 

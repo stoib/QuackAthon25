@@ -41,16 +41,20 @@ def timetable():
 
 @app.route('/student')
 def student():
-    render_template("student-info.html")
+    return render_template("pick_student.html")
 
-@app.route('/student-info/<int:student_id>')
+@app.route('/student/<int:student_id>')
 def student_details(student_id):
     student = getStudentById(student_id)
-
+    print (student) 
     if (student != "NULL"):
         return render_template("student-info.html", student=student)
     else:
         return render_template('no_student.html')
+
+@app.route('/sign-out')
+def sign_out():
+    return render_template("sign-out.html")
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

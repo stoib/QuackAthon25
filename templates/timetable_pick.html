@@ -10,7 +10,7 @@
 </div>
 
 <script>
-    document.getElementById('retrieveTimetable').addEventListener('click', () => {
+    /*document.getElementById('retrieveTimetable').addEventListener('click', () => {
     
     const num = parseInt(document.getElementById('id').value);
 
@@ -22,7 +22,42 @@
     {
         alert("Please enter a valid ID.");
     }
-})
+})*/
+
+let current_user = localStorage.getItem("current_user");
+
+if (!current_user)
+{
+    //no student currently signed in, error caught
+
+    //moving on to event listener for after user enters student number
+    document.getElementById('retrieveDetails').addEventListener('click', () => {
+    
+    const num = parseInt(document.getElementById('id').value);
+
+    if (!isNaN(num))
+    {
+        //writing user id for debugging
+        console.log(num)
+
+        //saving 'current user' to local storage
+        localStorage.setItem("current_user", num);
+        print("User stored")
+
+        //moving to user page
+        window.location.href = `/timetable/${num}`;
+    } else
+    {
+        alert("Please enter a valid ID.");
+    }
+    })
+} else
+{
+    //current_user exists, moving straight to their page
+    window.location.href = `/timetable/${current_user}`
+}
+
+
 </script>
 
 

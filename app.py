@@ -53,7 +53,7 @@ def student_details(student_id):
         return render_template('no_student.html')
 
 @app.route('/sign-out')
-def sign-out():
+def sign_out():
     return render_template("sign-out.html")
 
 if __name__ == '__main__':

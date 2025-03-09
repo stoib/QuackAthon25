@@ -11,10 +11,10 @@ def compileTimesForStudent(idToFind):
             foundStudent = studentData[i]
             print(foundStudent)
     if (foundStudent == "NULL"):
-        return foundStudent;
+        return foundStudent
     
     #check and collate class times
-    collatedTimes = [];
+    collatedTimes = []
 
     for i in range (len(foundStudent.get('modules'))):
         for j in range(len(classData)):

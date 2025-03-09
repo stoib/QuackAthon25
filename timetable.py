@@ -11,10 +11,11 @@ classData = [
     'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "11:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
     },
     {
-    'id':2, 'name':"webdev", 'lectures': [{'title':"Seminar", 'day':"Tuesday", 'time': "11:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
+    'id':2, 'name':"webdev", 'lectures': [{'title':"Seminar", 'day':"Tuesday", 'time': "11:00", 'location':"QMB", 'map': "link"},
+                                          {'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': 'link'}]
     }
 ]
-
+#Queen+Mother+Building+(QMB)/@56.4584671,-3.0010929,15
 #will need to rework to use student information
 def getTimeTableById(toFind):
     results = []

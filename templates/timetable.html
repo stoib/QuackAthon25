@@ -61,11 +61,12 @@
               {% include 'timetable-rowTemplateUpper.html' %}
               
               {% for index in timetable %}
-                {% if index.lectures[0].day == 'Friday' %}
-              
-                    {% include 'timetable-rowTemplateLower.html' %}
-              
-                {% endif %}
+                {% for i in index.lectures %}
+                <h1>{{ i }}</h1>
+                  {% if index.lectures[i].day == 'Friday' %}#error
+                      {% include 'timetable-rowTemplateLower.html' %}
+                  {% endif %}
+                {% endfor %}
               {% endfor %}
                   </tbody>
               </table>

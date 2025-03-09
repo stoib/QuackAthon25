@@ -52,5 +52,9 @@ def student_details(student_id):
     else:
         return render_template('no_student.html')
 
+@app.route('/sign-out')
+def sign-out():
+    return render_template("sign-out.html")
+
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

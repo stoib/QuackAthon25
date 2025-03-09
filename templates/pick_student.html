@@ -11,14 +11,9 @@
 
 <script>
 
-    try
-    {
-        //attempting to read current user from cache
-        const current_user = JSON.parse(localStorage.getItem("current_user"));
+    let current_user = localStorage.getItem("current_users");
 
-        //current_user exists, moving straight to their page
-        window.location.href = `/user/${num}`
-    } catch (err)
+    if (!current_user)
     {
         //no student currently signed in, error caught
 
@@ -33,7 +28,8 @@
             console.log(num)
 
             //saving 'current user' to local storage
-            localStorage.setItem("current_user", JSON.stringify({num}));
+            localStorage.setItem("current_user", num);
+            print("User stored")
 
             //moving to user page
             window.location.href = `/student/${num}`;
@@ -42,7 +38,12 @@
             alert("Please enter a valid ID.");
         }
         })
+    } else
+    {
+        //current_user exists, moving straight to their page
+        window.location.href = `/student/${num}`
     }
+    
 </script>
 
 

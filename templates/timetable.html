@@ -5,12 +5,12 @@
 {% include 'timetable-rowTemplateUpper.html' %}
 
 {% for index in timetable %}
-  {% if index.lectures[0].day == 'Monday' %}
-
-      {% include 'timetable-rowTemplateLower.html' %}
-
-  {% endif %}
-{% endfor %}
+            {% for lecture in index.lectures %}
+              {% if lecture.day == 'Monday' %}
+              {% include 'timetable-rowTemplateLower.html' %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
 </tbody>
 </table>
 
@@ -20,12 +20,12 @@
   {% include 'timetable-rowTemplateUpper.html' %}
   
   {% for index in timetable %}
-    {% if index.lectures[0].day == 'Tuesday' %}
-  
-        {% include 'timetable-rowTemplateLower.html' %}
-  
-    {% endif %}
-  {% endfor %}
+            {% for lecture in index.lectures %}
+              {% if lecture.day == 'Tuesday' %}
+              {% include 'timetable-rowTemplateLower.html' %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
       </tbody>
   </table>
 
@@ -34,12 +34,12 @@
       {% include 'timetable-rowTemplateUpper.html' %}
       
       {% for index in timetable %}
-        {% if index.lectures[0].day == 'Wednesday' %}
-      
-            {% include 'timetable-rowTemplateLower.html' %}
-      
-        {% endif %}
-      {% endfor %}
+            {% for lecture in index.lectures %}
+              {% if lecture.day == 'Wednesday' %}
+              {% include 'timetable-rowTemplateLower.html' %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
           </tbody>
       </table>
 
@@ -48,27 +48,26 @@
           {% include 'timetable-rowTemplateUpper.html' %}
           
           {% for index in timetable %}
-            {% if index.lectures[0].day == 'Thursday' %}
-          
-                {% include 'timetable-rowTemplateLower.html' %}
-          
-            {% endif %}
+            {% for lecture in index.lectures %}
+              {% if lecture.day == 'Thursday' %}
+              {% include 'timetable-rowTemplateLower.html' %}
+              {% endif %}
+            {% endfor %}
           {% endfor %}
               </tbody>
           </table>
           <table class="table table-hover caption-top ms-3">
             <caption style="margin-left: 10px;"><strong>Friday</strong></caption>
-              {% include 'timetable-rowTemplateUpper.html' %}
-              
-              {% for index in timetable %}
-                {% if index.lectures[0].day == 'Friday' %}
-              
-                    {% include 'timetable-rowTemplateLower.html' %}
-              
-                {% endif %}
-              {% endfor %}
+            {% include 'timetable-rowTemplateUpper.html' %}
+
+            {% for index in timetable %}
+            {% for lecture in index.lectures %}
+              {% if lecture.day == 'Friday' %}
+              {% include 'timetable-rowTemplateLower.html' %}
+              {% endif %}
+            {% endfor %}
+          {% endfor %}
                   </tbody>
               </table>
-
-
+              
 {% include 'footer.html' %}

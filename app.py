@@ -1,6 +1,7 @@
 from flask import Flask, render_template
 from society_data import *
 from timetable import *
+from student import *
 
 app = Flask(__name__)
 
@@ -36,6 +37,15 @@ def society_list():
 @app.route('/timetable')
 def timetable():
     return render_template("timetable_pick.html")
+
+@app.route('/user/<int:student_id>')
+def timetable_detail(student_id):
+    person = getStudentById(student_id)
+
+    if (person != "NULL"):
+        return render_template("student.html", student=student)
+    else:
+        return render_template('no_student.html')
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=8000)

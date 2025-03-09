@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Input User ID{% endblock %}
+{% block content %}
+
+<div style="margin-left: 30px;">
+    <p>Please enter your student ID: </p>
+    <input type="number" id="id" name="id" min="0" max="9999">
+
+    <a class="btn btn-primary" id="retrieveDetails" role="button">Submit</a>
+</div>
+
+<script>
+    document.getElementById('retrieveTimetable').addEventListener('click', () => {
+    
+    const num = parseInt(document.getElementById('id').value);
+
+    if (!isNaN(num))
+    {
+        console.log(num)
+        window.location.href = `/user/${num}`
+    } else
+    {
+        alert("Please enter a valid ID.");
+    }
+})
+</script>
+
+
+{% endblock %}

@@ -62,9 +62,15 @@
               
               {% for index in timetable %}
                 {% for i in index.lectures %}
-                <h1>{{ i }}</h1>
+                <h1>{{ index.lectures[0] }}</h1>
                   {% if index.lectures[i].day == 'Friday' %}#error
-                      {% include 'timetable-rowTemplateLower.html' %}
+                  <tr>
+                    <td scope="row">{{ index.lectures[0].title }}</td>
+                    <td>{{ index.name }}</td>
+                    <td>{{ index.lectures[0].location }}</td>
+                    <td>{{ index.lectures[0].time }}</td>
+                    <td>{{ index.lectures[0].map }}</td>
+                </tr>
                   {% endif %}
                 {% endfor %}
               {% endfor %}

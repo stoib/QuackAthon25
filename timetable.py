@@ -8,10 +8,10 @@
 #id is the module_id
 classData = [
     {
-    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "11:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
+    'id':1, 'name':"multi-paradigm", 'lectures': [{'title':"Seminar", 'day':"Monday", 'time': "12:00", 'location':"QMB", 'map': "link"},{'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': "link"}]
     },
     {
-    'id':2, 'name':"webdev", 'lectures': [{'title':"Seminar", 'day':"Tuesday", 'time': "11:00", 'location':"QMB", 'map': "link"},
+    'id':2, 'name':"webdev", 'lectures': [{'title':"Seminar", 'day':"Wednesday", 'time': "11:00", 'location':"QMB", 'map': "link"},
                                           {'title':"lab", 'day':"Friday", 'time': "09:00", 'location':"Dalhousie",'map': 'link'}]
     }
 ]
@@ -21,7 +21,7 @@ def getTimeTableById(toFind):
     results = []
     for i in range (len(classData)):
         if (classData[i].get('id') == toFind):
-            print(classData[i])
+            #print(classData[i])
             results.append(classData[i])
     if len(results) >= 1:
         return results

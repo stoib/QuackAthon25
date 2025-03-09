@@ -38,8 +38,12 @@ def society_list():
 def timetable():
     return render_template("timetable_pick.html")
 
-@app.route('/user/<int:student_id>')
-def timetable_detail(student_id):
+@app.route('/student')
+def student():
+    render_template("student.html")
+
+@app.route('/student/<int:student_id>')
+def student_details(student_id):
     student = getStudentById(student_id)
 
     if (student != "NULL"):

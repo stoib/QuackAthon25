@@ -5,15 +5,11 @@ studentData = [
 ]
 
 def getStudentById(toFind):
-    results = []
     for i in range (len(studentData)):
         if (studentData[i].get('id') == toFind):
-            results.append(studentData[i])
-    if len(results) >= 1:
-        return results
-    else:
-        print("Error")
-        return "NULL"
+            return studentData[i]
+    print("Error")
+    return "NULL"
     
 def getFullStudentData():
     return studentData

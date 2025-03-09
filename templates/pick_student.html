@@ -10,14 +10,14 @@
 </div>
 
 <script>
-    document.getElementById('retrieveTimetable').addEventListener('click', () => {
+    document.getElementById('retrieveDetails').addEventListener('click', () => {
     
     const num = parseInt(document.getElementById('id').value);
 
     if (!isNaN(num))
     {
         console.log(num)
-        window.location.href = `/user/${num}`
+        window.location.href = `/student/${num}`
     } else
     {
         alert("Please enter a valid ID.");

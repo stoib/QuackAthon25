@@ -8,7 +8,7 @@ def getPersonById(toFind):
     results = []
     for i in range (len(personData)):
         if (personData[i].get('id') == toFind):
-            results.append(classData[i])
+            results.append(personData[i])
     if len(results) >= 1:
         return results
     else:
